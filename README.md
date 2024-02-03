@@ -4,4 +4,5 @@ Secondly, the second category is a folder called "exercise", which contains prac
 
 Finally, the third category of folders organises drafts of websites created during the individual's learning process, including HTML and CSS files. This section of material reflects the learner's progress in learning the fundamentals and skills of web development, demonstrating the ability to apply theory to practice. These drafts are not only a demonstration of learning outcomes, but also provide a valuable reference for PMA's projects.
 
+Reference:
 Shaw, Z. (2017). Learn Python 3 the Hard Way: A Very Simple Introduction to the Terrifyingly Beautiful World of Computers and Code. United Kingdom: Pearson Education.
