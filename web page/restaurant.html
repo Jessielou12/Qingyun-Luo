@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusEats-Restaurant</title>
+    <link rel="stylesheet" href="./css/styles3.css">
+</head>
+
+<body>
+    <nav class="navigation-bar">
+        <ul>
+            <li><a href="http://127.0.0.1:3000/Home%20page.html">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="http://127.0.0.1:3000/carte" id="cart-icon">🛒</a></li>
+        </ul>
+        <!-- Adapted from Chatgpt, navigation bar -->
+        <div class="navigation bar">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="searchFunction()">Search</button>
+        </div>
+    </nav>
+
+    <h1 class="product-title">CampusEats</h1>
+
+    <h2 class="restaurant">Restaurant</h2>
+
+    <div class="greetings">
+        <p>Welcome to the restaurant!<br><br>Indulge in delicious food that brings enjoyable moments to your day.</p>
+        <p>We are actively working to expand our services and look forward to bringing you more exciting
+            options.<br><br>Stay tuned for updates!</p>
+    </div>
+
+    <section>
+        <div class="store-location">
+            <h2>Store Locations</h2>
+            <ul>
+                <li>
+                    <h3>Warwick Arts Centre</h3>
+                    <div class="map-container" id="map-warwick-arts-centre"></div>
+                    <p>Business Hours: Monday - Sunday: 11:00 AM - 20:00 PM</p>
+                    <p class="wait-time" id="wait-warwick-arts-centre">Wait Time: 10 minutes</p>
+                    <button class="choose-this-store">Choose this store</button>
+                </li>
+                <li>
+                    <h3>Gibbet Hill Rd</h3>
+                    <div class="map-container" id="map-gibbet-hill-rd"></div>
+                    <p>Business Hours: Monday - Sunday: 9:00 AM - 21:00 PM</p>
+                    <p class="wait-time" id="wait-gibbet-hill-rd">Wait Time: 21 minutes</p>
+                    <button class="choose-this-store">Choose this store</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="menu">
+        <h2>Menu</h2>
+    </div>
+
+    <!-- The following specific product information comes from the Google (Benugo Warwick Bar and Kitchen). -->
+    <section>
+        <div class="menu-item">
+            <h2>Beef Burger</h2>
+            <section class="product-image">
+                <img src="./ images/Beef Burger.jpg" alt="Beef Burger" width="800px">
+            </section>
+            <p>Double 3oz patty, smoked streaky bacon, tomato relish, american cheese, house pickles, lettuce, tomato,
+                gherkins, French Fries</p>
+            <p>Calories: 1239kcal</p>
+
+            <div class="size-options">
+                <button class="little">Little</button>
+                <button class="regular">Regular</button>
+            </div>
+
+            <div class="sauce">
+                <label for="sauce">Sauce</label>
+                <select name="sauce" id="sauce">
+                    <option value="mayo">Mayo</option>
+                    <option value="ketchup">Ketchup</option>
+                    <option value="bbq sauce">BBQ Sauce</option>
+                </select>
+            </div>
+
+            <div class="quantity">
+                <label for="quantity">Quantity</label>
+                <select name="quantity" id="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <table class="allergens">
+                <thead>
+                    <tr>
+                        <th>Allergens</th>
+                        <th>Ingredients</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gluten</td>
+                        <td>Burger bun contains gluten.</td>
+                    </tr>
+                    <tr>
+                        <td>Milk</td>
+                        <td>Cheese is an ingredient in our burger.</td>
+                    </tr>
+                    <tr>
+                        <td>Egg</td>
+                        <td>Mayonnaise in the burger contains egg.</td>
+                    </tr>
+                    <tr>
+                        <td>Soy</td>
+                        <td>Soy-based ingredients may be present.</td>
+                    </tr>
+                    <tr>
+                        <td>Sesame</td>
+                        <td>Sesame seeds may be present on the bun.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="size-options">
+                <button class="takeaway">Takeaway</button>
+                <button class="eat-in">Eat in</button>
+            </div>
+
+            <p class="price">Price: £5.95 (basic)</p>
+            <button class="add-to-bag">Add to bag</button>
+
+            <section class="customer-reviews">
+                <h2>Customer Reviews</h2>
+                <article>
+                    <h3>Stephen Molloy</h3>
+                    <p>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>The beef burger is very delicious. Would recommend it!</p>
+                </article>
+                <article>
+                    <h3>Aaron S</h3>
+                    <p>⭐️⭐️⭐️⭐️</p>
+                    <p>A great atmosphere and lovely food. Well worth a visit anytime of day.</p>
+                </article>
+            </section>
+        </div>
+
+        <div class="menu-item">
+            <h2>Pizza</h2>
+            <section class="product-image">
+                <img src="./ images/Pizza.jpg" alt="Pizza" width="800px">
+            </section>
+            <p>This pizza features a thin, crispy crust topped with rich tomato sauce, fresh cheese, Italian sausage,
+                ham, mushrooms, and olives, creating a flavorful and multi-layered taste that captures the essence of
+                Italian cuisine.</p>
+            <p>Calories: 1076kcal</p>
+
+            <div class="size-options">
+                <button class="small">Small</button>
+                <button class="medium">Medium</button>
+                <button class="large">Large</button>
+            </div>
+
+            <div class="select">
+                <label for="select">Select</label>
+                <select name="select" id="select">
+                    <option value="ham">Ham</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pineapple">Pineapple</option>
+                    <option value="vegetarian">Vegetarian</option>
+                </select>
+            </div>
+
+            <div class="quantity">
+                <label for="quantity">Quantity</label>
+                <select name="quantity" id="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <table class="allergens">
+                <thead>
+                    <tr>
+                        <th>Allergens</th>
+                        <th>Ingredients</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gluten</td>
+                        <td>The pizza crust contains gluten.</td>
+                    </tr>
+                    <tr>
+                        <td>Milk</td>
+                        <td>Cheese is an ingredient in our pizza.</td>
+                    </tr>
+                    <tr>
+                        <td>Nut</td>
+                        <td>Some pizzas may contain pine nuts or other tree nuts.</td>
+                    </tr>
+                    <tr>
+                        <td>Soy</td>
+                        <td>Soy-based ingredients may be present.</td>
+                    </tr>
+                    <tr>
+                        <td>Wheat</td>
+                        <td>Wheat-based ingredients may be present.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="size-options">
+                <button class="takeaway">Takeaway</button>
+                <button class="eat-in">Eat in</button>
+            </div>
+
+            <p class="price">Price: £13 (Medium+£1.8)</p>
+            <button class="add-to-bag">Add to bag</button>
+
+            <section class="customer-reviews">
+                <h2>Customer Reviews</h2>
+                <article>
+                    <h3>Marwa S</h3>
+                    <p>⭐️⭐️⭐️⭐️</p>
+                    <p>Really nice restaurant with a cozy atmosphere and really beautiful design. The staff is very
+                        friendly and attentive, the service was fast despite the restaurant being pretty busy. The food
+                        was pretty good too, particularly the cheesecake and the pizzas. Would recommend it!</p>
+                </article>
+            </section>
+        </div>
+
+        <div class="menu-item">
+            <h2>Chicken Wings</h2>
+            <section class="product-image">
+                <img src="./ images/chicken wings.jpg" alt="chicken wings" width="800px">
+            </section>
+            <p>6 Chicken Wings coated in Frank's hot sauce with a blue cheese ranch dressing - Kcals per wing.</p>
+            <p>Calories: 187kcal</p>
+
+            <div class="size-options">
+                <button class="regular">Regular</button>
+                <button class="large">Large</button>
+            </div>
+
+            <div class="quantity">
+                <label for="quantity">Quantity</label>
+                <select name="quantity" id="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <table class="allergens">
+                <thead>
+                    <tr>
+                        <th>Allergens</th>
+                        <th>Ingredients</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gluten</td>
+                        <td>Some chicken wing coatings or sauces may contain gluten.</td>
+                    </tr>
+                    <tr>
+                        <td>Milk</td>
+                        <td>Dairy-based ingredients may be present in certain coatings or dips.</td>
+                    </tr>
+                    <tr>
+                        <td>Celery</td>
+                        <td>Celery may be present in some marinades or sauces.</td>
+                    </tr>
+                    <tr>
+                        <td>Soy</td>
+                        <td>Soy-based sauces or marinades may be used.</td>
+                    </tr>
+                    <tr>
+                        <td>Wheat</td>
+                        <td>Wheat-containing ingredients might be used in the breading or coatings.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="size-options">
+                <button class="takeaway">Takeaway</button>
+                <button class="eat-in">Eat in</button>
+            </div>
+
+            <p class="price">Price: £8 (basic)</p>
+            <button class="add-to-bag">Add to bag</button>
+
+            <section class="customer-reviews">
+                <h2>Customer Reviews</h2>
+                <article>
+                    <h3>Nikki</h3>
+                    <p>⭐️⭐️</p>
+                    <p>The chicken wings were a bit cold.</p>
+                </article>
+            </section>
+        </div>
+
+        <div class="menu-item">
+            <h2>House Slaw (vg)</h2>
+            <section class="product-image">
+                <img src="./ images/house slaw.jpg" alt="house slaw" width="800px">
+            </section>
+            <p>Vegan mayo, carrot, cabbage, red onion, parsley.</p>
+            <p>Calories: 208kcal</p>
+
+            <div class="size-options">
+                <button class="regular">Regular</button>
+                <button class="large">Large</button>
+            </div>
+
+            <div class="quantity">
+                <label for="quantity">Quantity</label>
+                <select name="quantity" id="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <table class="allergens">
+                <thead>
+                    <tr>
+                        <th>Allergens</th>
+                        <th>Ingredients</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gluten</td>
+                        <td>Some chicken wing coatings or sauces may contain gluten.</td>
+                    </tr>
+                    <tr>
+                        <td>Celery</td>
+                        <td>Celery may be an ingredient in the slaw.</td>
+                    </tr>
+                    <tr>
+                        <td>Sulfites</td>
+                        <td>Vinegar or certain dressings may contain sulfites.</td>
+                    </tr>
+                    <tr>
+                        <td>Soy</td>
+                        <td>Soy-based sauces or marinades may be used.</td>
+                    </tr>
+                    <tr>
+                        <td>Wheat</td>
+                        <td>Wheat-containing ingredients might be used in the breading or coatings.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="size-options">
+                <button class="takeaway">Takeaway</button>
+                <button class="eat-in">Eat in</button>
+            </div>
+
+            <p class="price">Price: £4.5 (basic)</p>
+            <button class="add-to-bag">Add to bag</button>
+
+            <section class="customer-reviews">
+                <h2>Customer Reviews</h2>
+                <article>
+                    <h3>Anna</h3>
+                    <p>⭐️⭐️⭐️⭐️</p>
+                    <p>Very good food here.</p>
+                </article>
+            </section>
+        </div>
+
+        <div class="menu-item">
+            <h2>Coke Can</h2>
+            <section class="product-image">
+                <img src="./ images/coka can.jpg" alt="coka-can" width="800px">
+            </section>
+            <p>Original Taste.</p>
+            <p>Calories: 140kcal</p>
+
+            <div class="quantity">
+                <label for="quantity">Quantity</label>
+                <select name="quantity" id="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="size-options">
+                <button class="takeaway">Takeaway</button>
+                <button class="eat-in">Eat in</button>
+            </div>
+
+            <p class="price">Price: £2.5</p>
+            <button class="add-to-bag">Add to bag</button>
+
+            <section class="customer-reviews">
+                <h2>Customer Reviews</h2>
+                <article>
+                    <h3>Alice</h3>
+                    <p>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>I bought a lot of bottles with the student card discount. Hope there can be such an event next
+                        time.</p>
+                </article>
+            </section>
+        </div>
+    </section>
+
+    <div class="footer">
+        <a href="http://127.0.0.1:3000/contact us">Contact Us</a>
+        <a href="http://127.0.0.1:3000/track order">Track Order</a>
+    </div>
+</body>
+
+</html>
