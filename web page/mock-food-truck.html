@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusEats-Food Truck</title>
+    <link rel="stylesheet" href="./css/styles4.css">
+</head>
+
+<body>
+    <nav class="navigation-bar">
+        <ul>
+            <li><a href="http://127.0.0.1:3000/Home%20page.html">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="http://127.0.0.1:3000/carte" id="cart-icon">🛒</a></li>
+        </ul>
+        <div class="navigation bar">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="Search()">Search</button>
+        </div>
+    </nav>
+
+    <h1 class="product-title">CampusEats</h1>
+
+    <h2 class="food-truck">Food Truck</h2>
+
+    <div class="greetings">
+        <p>Welcome to the Food Truck!<br><br> Indulge in delicious food that brings enjoyable moments to your day.</p>
+        <p>We are actively working to expand our services and look forward to bringing you more exciting
+            options.<br><br>Stay tuned for updates!</p>
+    </div>
+
+    <section>
+        <div class="store-location">
+            <h2>Store Locations</h2>
+            <ul>
+                <li>
+                    <h3>Computer Science, Quadrant</h3>
+                    <div class="map-container" id="map-computer-science-quadrant"></div>
+                    <p>Business Hours: Monday - Sunday: 8:00 AM - 16:00 PM</p>
+                    <p class="wait-time" id="wait-warwick-arts-centre">Wait Time: 8 minutes</p>
+                    <button class="choose-this-store">Choose this store</button>
+                </li>
+                <li>
+                    <h3>Coventry Rd</h3>
+                    <div class="map-container" id="map-coventry-rd"></div>
+                    <p>Business Hours: Monday - Sunday: 8:00 AM - 14:00 PM</p>
+                    <p class="wait-time" id="wait-gibbet-hill-rd">Wait Time: 4 minutes</p>
+                    <button class="choose-this-store">Choose this store</button>
+                </li>
+                <li>
+                    <h3>Cannon Park</h3>
+                    <div class="map-container" id="map-cannon-park"></div>
+                    <p>Business Hours: Monday - Sunday: 11:00 AM - 17:00 PM</p>
+                    <p class="wait-time" id="wait-gibbet-hill-rd">Wait Time: 2 minutes</p>
+                    <button class="choose-this-store">Choose this store</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="menu">
+        <h2>Menu</h2>
+    </div>
+
+    <!-- The following specific product information comes from the Google (Tokyo Express and Jin Long Noodles). -->
+    <section>
+        <div class="menu-item">
+            <h2>Chicken Chow Mein</h2>
+            <section class="product-image">
+                <img src="./ images/Chicken Chow Mein.jpg" alt="Chicken Chow Mein" width="800px">
+            </section>
+            <p>Savor the delicious blend of tender chicken, crisp vegetables, and thin noodles in our Chicken Chow Mein.
+                Wok-fried to perfection and coated in a savory soy-based sauce, it's a delightful harmony of flavors and
+                textures.</p>
+            <p>Calories: 574kcal</p>
+
+            <div class="size-options">
+                <button class="regular">Regular</button>
+                <button class="plus egg">+£1.00 Egg</button>
+            </div>
+
+            <div class="sauce">
+                <label for="sauce">Sauce</label>
+                <select name="sauce" id="sauce">
+                    <option value="chili sauce">Chili Sauce</option>
+                    <option value="ginger garlic sauce">Ginger Garlic Sauce</option>
+                    <option value="black pepper sauce">Black Pepper Sauce</option>
+                </select>
+            </div>
+
+            <div class="quantity">
+                <label for="quantity">Quantity</label>
+                <select name="quantity" id="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <table class="allergens">
+                <thead>
+                    <tr>
+                        <th>Allergens</th>
+                        <th>Ingredients</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gluten</td>
+                        <td>Noodles contains gluten.</td>
+                    </tr>
+                    <tr>
+                        <td>Egg</td>
+                        <td>Egg noodles and scrambled eggs both contain eggs.</td>
+                    </tr>
+                    <tr>
+                        <td>Soy</td>
+                        <td>Soy-based ingredients may be present.</td>
+                    </tr>
+                    <tr>
+                        <td>Wheat</td>
+                        <td>The breaded coating on the chicken cutlet may contain wheat.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="price">Price: £5.50</p>
+            <button class="add-to-bag">Add to bag</button>
+
+            <section class="customer-reviews">
+                <h2>Customer Reviews</h2>
+                <article>
+                    <h3>Andrei</h3>
+                    <p>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>I use this place at least once a week after discovering it earlier this year. The chicken chow
+                        mein and Katsu chicken curry are to die for. The gent that serves is really polite and friendly
+                        and you definitely get your monies worth. More people need to know about this place. Fantastic
+                        food!!! I'll be back again next week.</p>
+                </article>
+            </section>
+        </div>
+
+        <div class="menu-item">
+            <h2>Katsu Chicken Curry with Rice</h2>
+            <section class="product-image">
+                <img src="./ images/Katsu Chicken Curry with Rice.jpg" alt="Katsu Chicken Curry with Rice"
+                    width="800px">
+            </section>
+            <p>Indulge in the irresistible flavors of our Katsu Chicken Curry with Rice, featuring crispy breaded
+                chicken cutlet bathed in rich and aromatic curry sauce, served alongside fluffy white rice for a
+                delightful and satisfying culinary experience.</p>
+            <p>Calories: 728kcal</p>
+
+            <div class="size-options">
+                <button class="regular">Regular</button>
+                <button class="plus egg">+£1.00 Egg</button>
+            </div>
+
+            <div class="sauce">
+                <label for="sauce">Sauce</label>
+                <select name="sauce" id="sauce">
+                    <option value="chili curry sauce">Chili Curry Sauce</option>
+                    <option value="japanese curry sauce">Japanese Curry Sauce</option>
+                </select>
+            </div>
+
+            <div class="quantity">
+                <label for="quantity">Quantity</label>
+                <select name="quantity" id="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <table class="allergens">
+                <thead>
+                    <tr>
+                        <th>Allergens</th>
+                        <th>Ingredients</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Milk</td>
+                        <td>Dairy-based ingredients may be present in the curry sauce or as part of the dish.</td>
+                    </tr>
+                    <tr>
+                        <td>Egg</td>
+                        <td>The breading on the chicken cutlet may include egg.</td>
+                    </tr>
+                    <tr>
+                        <td>Soy</td>
+                        <td>Soy-based ingredients may be present.</td>
+                    </tr>
+                    <tr>
+                        <td>Wheat</td>
+                        <td>The breaded coating on the chicken cutlet may contain wheat.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="price">Price: £6.00</p>
+            <button class="add-to-bag">Add to bag</button>
+
+            <section class="customer-reviews">
+                <h2>Customer Reviews</h2>
+                <article>
+                    <h3>Claudia Lo</h3>
+                    <p>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>My recommendation is Chicken Katsu Curry. The thinly sliced chicken cutlet that's crispy on the
+                        outside, the chewy mushrooms, and the rich curry sauce create an addictive and delicious flavor.
+                        It's a wonderful food wagon where the staff always greets you with a warm and friendly smile.
+                        Definitely 5 stars!! 🌟 🌟 🌟 🌟 🌟</p>
+                </article>
+            </section>
+        </div>
+
+        <div class="menu-item">
+            <h2>Curry Beef Brisket with Rice</h2>
+            <section class="product-image">
+                <img src="./ images/Curry Beef Brisket with Rice.jpg" alt="Curry Beef Brisket with Rice" width="800px">
+            </section>
+            <p>Indulge in the irresistible flavors of our Katsu Chicken Curry with Rice, featuring crispy breaded
+                chicken cutlet bathed in rich and aromatic curry sauce, served alongside fluffy white rice for a
+                delightful and satisfying culinary experience.</p>
+            <p>Calories: 683kcal</p>
+
+            <div class="size-options">
+                <button class="regular">Regular</button>
+                <button class="plus egg">+£1.00 Egg</button>
+            </div>
+
+            <div class="sauce">
+                <label for="sauce">Sauce</label>
+                <select name="sauce" id="sauce">
+                    <option value="chili curry sauce">Chili Curry Sauce</option>
+                    <option value="japanese curry sauce">Japanese Curry Sauce</option>
+                </select>
+            </div>
+
+            <div class="quantity">
+                <label for="quantity">Quantity</label>
+                <select name="quantity" id="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <table class="allergens">
+                <thead>
+                    <tr>
+                        <th>Allergens</th>
+                        <th>Ingredients</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Milk</td>
+                        <td>Dairy-based ingredients may be present in the curry sauce or as part of the dish.</td>
+                    </tr>
+                    <tr>
+                        <td>Celery</td>
+                        <td>Celery is a common ingredient in some curry recipes.</td>
+                    </tr>
+                    <tr>
+                        <td>Soy</td>
+                        <td>Soy-based ingredients may be present.</td>
+                    </tr>
+                    <tr>
+                        <td>Wheat</td>
+                        <td>Flour or wheat-based ingredients may be used in the curry sauce or as part of the dish.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="price">Price: £6.00</p>
+            <button class="add-to-bag">Add to bag</button>
+
+            <section class="customer-reviews">
+                <h2>Customer Reviews</h2>
+                <article>
+                    <h3>Harry Conneely</h3>
+                    <p>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>Great portion of the food, can be separated to two meals.</p>
+                </article>
+            </section>
+        </div>
+
+        <div class="menu-item">
+            <h2>Beef Noodles</h2>
+            <section class="product-image">
+                <img src="./ images/Beef Noodles.jpg" alt="Beef Noodles" width="800px">
+            </section>
+            <p>Savor the rich and hearty goodness of our Beef Noodles, featuring tender beef slices, perfectly cooked
+                noodles, and a flavorful sauce that promises a comforting and satisfying dining experience.</p>
+            <p>Calories: 583kcal</p>
+
+            <div class="size-options">
+                <button class="regular">Regular</button>
+                <button class="plus egg">+£1.00 Egg </button>
+            </div>
+
+            <div class="sauce">
+                <label for="sauce">Sauce</label>
+                <select name="sauce" id="sauce">
+                    <option value="soy sauce">Soy Sauce</option>
+                    <option value="chili sauce">Chili Sauce</option>
+                </select>
+            </div>
+
+            <div class="quantity">
+                <label for="quantity">Quantity</label>
+                <select name="quantity" id="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <table class="allergens">
+                <thead>
+                    <tr>
+                        <th>Allergens</th>
+                        <th>Ingredients</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sesame</td>
+                        <td>Sesame oil is used in the recipe</td>
+                    </tr>
+                    <td>Egg</td>
+                    <td>Egg noodles and scrambled eggs both contain eggs.</td>
+                    <tr>
+                        <td>Celery</td>
+                        <td>Celery is a common ingredient in the recipes.</td>
+                    </tr>
+                    <tr>
+                        <td>Soy</td>
+                        <td>Soy-based ingredients, such as soy sauce or tofu, may be present in the filling or dipping
+                            sauce.</td>
+                    </tr>
+                    <tr>
+                        <td>Wheat</td>
+                        <td>The noodles are typically made from wheat flour.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="price">Price: £5.50</p>
+            <button class="add-to-bag">Add to bag</button>
+
+            <section class="customer-reviews">
+                <h2>Customer Reviews</h2>
+                <article>
+                    <h3>Meimei Han</h3>
+                    <p>⭐️⭐️⭐️⭐️</p>
+                    <p>Very tasty noodles but a bit salty.</p>
+                </article>
+            </section>
+        </div>
+
+        <div class="menu-item">
+            <h2>Vegetable Gyoza Dumplings</h2>
+            <section class="product-image">
+                <img src="./ images/Vegetable Gyoza Dumplings.jpg" alt="Vegetable Gyoza Dumplings" width="800px">
+            </section>
+            <p>Indulge in our Vegetable Gyoza Dumplings, where delicate, thin wrappers encase a flavorful medley of
+                finely chopped vegetables, creating a perfect balance of taste and texture in every bite.</p>
+            <p>Calories: 383kcal</p>
+
+            <div class="size-options">
+                <button class="regular">Regular</button>
+                <button class="plus 3 more">+£1.00, 3 more</button>
+            </div>
+
+            <div class="sauce">
+                <label for="sauce">Sauce</label>
+                <select name="sauce" id="sauce">
+                    <option value="soy sauce">Soy Sauce</option>
+                    <option value="chili sauce">Chili Sauce</option>
+                </select>
+            </div>
+
+            <div class="quantity">
+                <label for="quantity">Quantity</label>
+                <select name="quantity" id="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <table class="allergens">
+                <thead>
+                    <tr>
+                        <th>Allergens</th>
+                        <th>Ingredients</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sesame</td>
+                        <td>Sesame oil is used in the recipe</td>
+                    </tr>
+                    <tr>
+                        <td>Celery</td>
+                        <td>Celery is a common ingredient in the recipes.</td>
+                    </tr>
+                    <tr>
+                        <td>Soy</td>
+                        <td>Soy-based ingredients, such as soy sauce or tofu, may be present in the filling or dipping
+                            sauce.</td>
+                    </tr>
+                    <tr>
+                        <td>Wheat</td>
+                        <td>The dumpling wrappers are typically made from wheat flour.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="price">Price: £4.50</p>
+            <button class="add-to-bag">Add to bag</button>
+
+            <section class="customer-reviews">
+                <h2>Customer Reviews</h2>
+                <article>
+                    <h3>Lei Le</h3>
+                    <p>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>Too delicious!</p>
+                </article>
+            </section>
+        </div>
+    </section>
+
+    <div class="footer">
+        <a href="http://127.0.0.1:3000/contact us">Contact Us</a>
+        <a href="http://127.0.0.1:3000/track order">Track Order</a>
+    </div>
+</body>
+
+</html>
